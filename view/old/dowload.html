@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <div id="capture">
+        <!-- Nội dung cần chụp ảnh -->
+        <p>Chụp ảnh đối tượng này</p>
+    </div>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script>
+        document.getElementById('capture').addEventListener('click', function () {
+            html2canvas(document.getElementById('capture')).then(function (canvas) {
+                // Chuyển canvas thành dữ liệu URL của hình ảnh
+                var imageData = canvas.toDataURL('image/png');
+    
+                // Tạo đối tượng FormData để chứa dữ liệu hình ảnh
+                var formData = new FormData();
+                formData.append('image', imageData);
+    
+                // Sử dụng Fetch API để gửi dữ liệu hình ảnh lên server
+                fetch('../../upload/', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Upload success:', data);
+                    // Xử lý sau khi tải lên thành công
+                })
+                .catch(error => {
+                    console.error('Upload error:', error);
+                    // Xử lý khi có lỗi
+                });
+            });
+        });
+    </script>
+        
+</body>
+</html>

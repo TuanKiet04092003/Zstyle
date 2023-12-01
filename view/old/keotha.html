@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drag and Drop Image</title>
+  <link rel="stylesheet" href="keotha.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+</head>
+<body>
+  <div id="image-container" class="drop-area" ondrop="drop(event)" ondragover="allowDrop(event)">
+    <div id="draggable-image">
+        <img id="image" src="../layout/assets/images/avatar.png" alt="Draggable Image"  draggable="true" ondragstart="drag(event,'image')">
+        <i id="zoom" class="zoom fas fa-glasses" draggable="true" ondragstart="drag(event,'zoom')"></i>
+        <i id="rotate" class="rotate fas fa-glasses" draggable="true" ondragstart="drag(event,'rotate')"></i>
+    </div>
+  </div>
+  <script src="keotha.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mouse Press and Release Event</title>
+  <style>
+    #myElement {
+      width: 100px;
+      height: 50px;
+      background-color: lightblue;
+      text-align: center;
+      line-height: 50px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="myElement">Click me</div>
+
+<script>
+  var myElement = document.getElementById('myElement');
+
+myElement.addEventListener('click', function() {
+  // Xử lý khi phần tử được click
+  myElement.style.backgroundColor = 'lightcoral';
+});
+
+myElement.addEventListener('mouseleave', function() {
+  // Xử lý khi chuột rời khỏi phần tử
+  myElement.style.backgroundColor = 'lightblue';
+});
+</script>
+
+</body>
+</html>

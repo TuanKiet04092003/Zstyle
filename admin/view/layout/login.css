@@ -1,0 +1,81 @@
+:root{
+    --green-color:#21B846;
+    --main-color: #B83E34;
+    --font-pop: "Poppins", sans-serif;
+    --font-alice: "Alice", sans-serif;
+    --font-Sans: 'Source Sans Pro', sans-serif;
+
+}
+img{
+    width: 24%;
+    margin-left: 38%;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+.boxlogin{
+    height: 270px;
+    width: 350px;
+    background-color: #FBF2F2;
+    margin: 0 auto;
+
+}
+.formlogin{
+    border: 0.5px solid gainsboro;
+    height: 100%;
+    width: 100%;
+    padding-top: 20px;
+    background-color: white;
+}
+h1{
+    font-size: 18px;
+    font-family: var(--font-Sans);
+    font-weight: 525;
+    margin-left: 10%;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+.formlogin>input{
+    margin-left: 10%;
+    padding-left: 10px;
+    font-size: 16px;
+    height: 40px;
+    width: 80%;
+    outline: none;
+    border: 1px solid  rgb(206, 205, 205);
+}
+.matkhau{
+    margin-left: 10%;
+    padding-left: 10px;
+    height: 40px;
+    width: 80%;
+    outline: none;
+    border: 1px solid  rgb(206, 205, 205);
+}
+.matkhau input{
+    font-size: 16px;
+    height: 38px;
+    width: 86%;
+    outline: none;
+    border: none;
+    outline: none;
+}
+.matkhau i{
+    margin: 0;
+    padding: 0;
+}
+button{
+    height: 40px;
+    width: 40%;
+    border: 1px solid var(--main-color);
+    background-color: var(--main-color);
+    color: white;
+    font-family: var(--font-Sans);
+    font-size: 18px;
+    font-weight: 500;
+    margin: 20px 30%;
+    transition: all 0.5s ease-in-out;
+}
+button:hover{
+    background-color: white;
+    color: var(--main-color);
+}
